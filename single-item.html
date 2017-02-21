@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rent24</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
+  <link rel="stylesheet" href="node_modules/jquery-ui-dist/jquery-ui.min.css">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/components/slider.min.css">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/components/slidenav.min.css">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/components/slideshow.min.css">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/components/dotnav.min.css">
+
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!--BEGIN header (logo and navbar)-->
+  <header class="uk-container uk-container-center uk-grid uk-grid-match uk-margin-top">
+    <div class="uk-width-medium-3-10">
+      <div>
+        <a href="index.html"><img src="img/logo.png" class="sm-center" alt="Logo">
+        </a></div>
+    </div>
+    <nav class="uk-nav uk-width-medium-7-10 uk-flex uk-flex-bottom uk-flex-right">
+      <ul class="uk-navbar-nav uk-hidden-small">
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="">О нас</a></li>
+        <li><a href="">Каталог вещей</a></li>
+        <li><a href="">Популярное</a></li>
+        <li><a href="">Рейтинг</a></li>
+        <li><a href="">Контакты</a></li>
+        <li><a href="">Войти</a></li>
+      </ul>
+      <!--BEGIN sidebar(off-canvas) button (appears on display < 768px)-->
+      <div>
+        <a href="#sidebar-menu" class="uk-navbar-toggle uk-visible-small"
+               data-uk-offcanvas="{target:'#sidebar-menu'}"></a>
+      </div>
+      <!--END sidebar(off-canvas) button (appears on display < 768px)-->
+
+    </nav>
+  </header>
+  <!--END header (logo and navbar)-->
+  <!--BEGIN sidebar-->
+  <div id="sidebar-menu" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+        <li><a href="index.html">Главная</a></li>
+        <li><a href="">О нас</a></li>
+        <li><a href="">Каталог вещей</a></li>
+        <li><a href="">Популярное</a></li>
+        <li><a href="">Рейтинг</a></li>
+        <li><a href="">Контакты</a></li>
+        <li><a href="">Войти</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--END sidebar-->
+
+  <!--BEGIN search form-->
+  <div class="search-bar-container">
+    <div class="uk-container uk-container-center">
+      <form class="search-form">
+        <label class="uk-form-label" for="search">Я ищу...</label>
+        <input type="text" id="search" placeholder="Бензиновый снегоуборщик">
+        <input class="btn" type="submit" value="Найти">
+      </form>
+    </div>
+  </div>
+  <!--END search form-->
+
+  <!--BEGIN single item info-->
+  <div class="single-item-info uk-container uk-container-center">
+    <h1>Mercedes-Benz GLE300 4Matic</h1>
+    <div class="uk-grid">
+      <div class="uk-width-medium-4-10">
+        <!--BEGIN photo slider-->
+        <div class="uk-slidenav-position" data-uk-slideshow>
+
+          <ul class="uk-slideshow">
+            <li style="background-image: url('img/item_mercedes_benz.jpg')">
+              <a href="img/item_mercedes_benz.jpg" data-uk-lightbox="{group:'item-photos'}"></a>
+            </li>
+            <li style="background-image: url('img/item_mercedes_benz_2.jpg')">
+              <a href="img/item_mercedes_benz_2.jpg" data-uk-lightbox="{group:'item-photos'}"></a>
+            </li>
+            <li style="background-image: url('img/item_mercedes_benz_3.jpg')">
+              <a href="img/item_mercedes_benz_3.jpg" data-uk-lightbox="{group:'item-photos'}"></a>
+            </li>
+            <li style="background-image: url('img/item_mercedes_benz_4.jpg')">
+              <a href="img/item_mercedes_benz_4.jpg" data-uk-lightbox="{group:'item-photos'}"></a>
+            </li>
+            <li style="background-image: url('img/item_mercedes_benz_5.jpg')">
+              <a href="img/item_mercedes_benz_5.jpg" data-uk-lightbox="{group:'item-photos'}"></a>
+            </li>
+          </ul>
+
+          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-previous" data-uk-slideshow-item="previous"></a>
+          <a href="" class="uk-slidenav uk-slidenav-contrast uk-slidenav-next" data-uk-slideshow-item="next"></a>
+
+          <!--BEGIN dotnav (навигация точки)-->
+          <ul class="uk-dotnav uk-dotnav-contrast uk-position-bottom uk-flex-center">
+            <li data-uk-slideshow-item="0"><a href=""></a></li>
+            <li data-uk-slideshow-item="1"><a href=""></a></li>
+            <li data-uk-slideshow-item="2"><a href=""></a></li>
+            <li data-uk-slideshow-item="3"><a href=""></a></li>
+            <li data-uk-slideshow-item="4"><a href=""></a></li>
+          </ul>
+          <!--END dotnav (навигация точки)-->
+
+        </div>
+        <!--END photo slider-->
+
+        <div class="seller-info">
+          <img class="avatar" src="img/avatar_stalker.jpg" alt="Аватар">
+          <div>
+            <span class="seller-name">Арман</span>
+            <div>
+              <i class="uk-icon-star"></i>
+              <i class="uk-icon-star"></i>
+              <i class="uk-icon-star"></i>
+              <i class="uk-icon-star"></i>
+              <i class="uk-icon-star-half-o"></i>
+            </div>
+            <a href="" class="uk-button-link">Отзывы арендаторов</a>
+          </div>
+        </div>
+
+        <div class="important-notes">
+          <h2>Важные моменты</h2>
+          <div class="uk-flex">
+            <p>Состояние:</p>
+            <p>Отличное</p>
+          </div>
+          <div class="uk-flex">
+            <p>Условия:</p>
+            <p>Оформление через нотариуса. Огромная просьба ездить аккуратно, за удары и царапины буду удерживать часть
+              залога в зависимости от тяжести повреждений. Не доводите до арбитража!</p>
+          </div>
+          <div class="uk-flex">
+            <p>Цена выкупа:</p>
+            <p>$70000</p>
+          </div>
+          <div class="uk-flex">
+            <p>Адрес:</p>
+            <p>Алматы, ул. Достык 27</p>
+          </div>
+        </div>
+        <br>
+
+        <!--BEGIN Яндекс-карта-->
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=XFFkfdFAz6eek4wPRuCS-9oMmxLPXgws&amp;width=100%25&amp;height=300&amp;lang=ru_RU&amp;sourceType=constructor&amp;"></script>
+        <!--END Яндекс-карта-->
+
+      </div>
+
+      <div class="uk-width-medium-6-10">
+        <h2>Описание</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Adipisci architecto atque beatae culpa, dicta dolor dolorum facilis id illo illum ipsam itaque magnam minus non odio optio perferendis possimus quisquam quos, rerum sint soluta suscipit, tenetur ullam veniam? Deserunt eligendi magni provident quibusdam quos repellat sunt. Accusamus adipisci alias aliquid atque distinctio eligendi eos, impedit incidunt laboriosam libero magnam magni nam, necessitatibus nihil, obcaecati perferendis sed totam voluptate voluptates voluptatum. Accusantium ad beatae consequuntur doloribus, earum facilis illo ipsa magnam obcaecati optio quam quia quibusdam quod quos sequi! Earum, fuga fugiat id in maiores numquam quis repellendus sint ut voluptas.</p>
+
+        <h2>Календарь аренды</h2>
+
+        <!--Для datepicker'a использован multiDatesPicker, расширение для Datepicker'а JQuery-UI multidatespickr.sourceforge.net-->
+        <div id="dates"></div>
+
+        <h2>Расчёт стоимости</h2>
+
+        <form class="uk-form uk-form-horizontal">
+
+          <div class="uk-form-row">
+            <span>Аренда:</span>
+            <span>3</span>
+            <span>дня</span>
+            <span>х</span>
+            <span>25 000 тг</span>
+            <span>= 75 000 тг</span>
+          </div>
+          <p><i class="uk-icon-plus"></i></p>
+          <div class="uk-form-row">
+            <span>Доставка:</span>
+            <select>
+              <option value="">Самовывоз</option>
+              <option value="">Курьером</option>
+              <option value="">Почта</option>
+            </select>
+            <span>бесплатно!</span>
+          </div>
+          <p><i class="uk-icon-plus"></i></p>
+          <div class="uk-form-row">
+            <span>Депозит:</span>
+            <span>100 000 тг</span>
+          </div>
+          <hr>
+          <div class="uk-form-row">
+            <span>Итого:</span>
+            <span>175 000 тг</span>
+          </div>
+          <p>Обратите внимание: сумма депозита блокируется на карте до завершения срока аренды, после чего эти 100 000 тг возвращаются на ваш счёт в полном объёме, если не нарушены условия аренды.</p>
+          <div class="uk-flex uk-flex-right uk-flex-middle">
+            <button class="btn">Арендовать</button>
+            <a href="" class="uk-button-link">Пожаловаться</a>
+          </div>
+          <p class="gray">Rent24.kz является онлайн-площадкой для организации предоставления арендных услуг и несёт ограниченную ответственность за недобросовестные действия арендодателей и арендаторов. Будьте бдительны при выборе аредодателя!</p>
+        </form>
+
+      </div>
+    </div>
+  </div>
+  <!--END single item info-->
+
+  <footer>
+    <div class="uk-container uk-container-center">
+      <h2>Меню</h2>
+      <div class="uk-grid">
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">О нас</a></li>
+          <li><a href="">Каталог вещей</a></li>
+          <li><a href="">Популярное</a></li>
+          <li><a href="">Рейтинг</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Как это работает?</a></li>
+          <li><a href="">Ответы на вопросы</a></li>
+          <li><a href="">Претензии по вещи</a></li>
+          <li><a href="">Арбитраж</a></li>
+          <li><a href="">Статистика</a></li>
+          <li><a href="">Обратная связь</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Регистрация на портале</a></li>
+          <li><a href="">Восстановление доступа</a></li>
+          <li><a href="">Свзязаться с поддержкой</a></li>
+          <li><a href="">У меня идея!</a></li>
+          <li><a href="">Сотрудничество</a></li>
+          <li><a href="">Реклама на портале</a></li>
+          <li><a href="">Карта сайта</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Политика использования</a></li>
+          <li><a href="">Пользовательское соглашение</a></li>
+        </ul>
+      </div>
+      <p class="copyright-note">&copy; Rent24.kz 2017 // Все права защищены<p>
+    </div>
+  </footer>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/jquery-ui-dist/jquery-ui.min.js"></script>
+  <script src="js/datepicker-ru.js"></script>
+  <script src="js/jquery-ui.multidatespicker.js"></script>
+  <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+  <script src="node_modules/uikit/dist/js/components/grid.min.js"></script>
+  <script src="node_modules/uikit/dist/js/components/slider.min.js"></script>
+  <script src="node_modules/uikit/dist/js/components/lightbox.min.js"></script>
+  <script src="node_modules/uikit/dist/js/components/slideshow.min.js"></script>
+
+  <script>
+    $( document ).ready(function() {
+      var today = new Date();
+      $('#dates').multiDatesPicker({
+        minDate: 0,
+        maxDate: 30,
+        addDisabledDates: [today.setDate(27), today.setDate(28)]
+      });
+    });
+  </script>
+
+</body>
+</html>

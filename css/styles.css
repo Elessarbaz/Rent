@@ -1,0 +1,277 @@
+@charset "UTF-8";
+/********************************************
+BEGIN переопределение стилей браузера и uikit
+********************************************/
+a:hover {
+  text-decoration: none; }
+
+.uk-grid-match > * > img {
+  width: auto; }
+
+.uk-navbar-nav > li > a,
+.uk-navbar-nav > li > a:hover,
+.uk-navbar-nav > li.uk-active > a {
+  color: #0099d2; }
+
+a.uk-navbar-toggle {
+  position: fixed;
+  border: 1px solid #ccc;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  height: 30px;
+  padding: 0 10px;
+  background: white; }
+
+/********************************************
+END переопределение стилей браузера и uikit
+********************************************/
+/********************************************
+BEGIN общие стили
+********************************************/
+.gray {
+  color: #cccccc; }
+
+@media screen and (max-width: 768px) {
+  .sm-center {
+    margin: 0 auto;
+    display: block; } }
+
+.btn {
+  cursor: pointer;
+  background: white;
+  border: 2px solid #0099d2;
+  display: inline-block;
+  color: #0099d2;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: .5s; }
+  .btn:hover {
+    background: #0099d2;
+    color: white; }
+  .btn:active {
+    background: #06bbff; }
+
+.search-bar-container {
+  padding: 20px;
+  border-bottom: 2px #ccc solid; }
+  .search-bar-container .search-form {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 16px; }
+    @media screen and (max-width: 768px) {
+      .search-bar-container .search-form {
+        flex-flow: column wrap; } }
+    .search-bar-container .search-form label {
+      flex: 0 0 auto;
+      align-self: center; }
+    .search-bar-container .search-form input[type=text] {
+      flex: 1 1 auto;
+      margin: 0 10px;
+      font-size: 16px;
+      padding: 0 10px; }
+      @media screen and (max-width: 768px) {
+        .search-bar-container .search-form input[type=text] {
+          margin: 10px 0;
+          padding: 10px; } }
+    .search-bar-container .search-form input[type=submit] {
+      flex: 0 0 200px; }
+      @media screen and (max-width: 768px) {
+        .search-bar-container .search-form input[type=submit] {
+          flex-basis: auto; } }
+
+.promotion + .search-bar-container {
+  padding: 55px 0 25px;
+  background: #eeeeee;
+  box-shadow: 0px -10px 30px -10px rgba(0, 0, 0, 0.3); }
+
+.seller-info {
+  display: flex;
+  padding: 0;
+  margin: 10px 0;
+  line-height: 1.2; }
+  .seller-info .seller-name {
+    font-weight: bold;
+    color: #666666; }
+  .seller-info img.avatar {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px; }
+
+/********************************************
+END общие стили
+********************************************/
+/********************************************
+BEGIN footer
+********************************************/
+footer {
+  background: #333;
+  color: white;
+  padding: 30px 0; }
+  footer h2 {
+    color: white; }
+  footer li {
+    list-style: none; }
+    footer li a {
+      color: white; }
+      footer li a:hover {
+        color: white;
+        text-decoration: underline; }
+  footer .copyright-note {
+    margin: 30px 0 0; }
+
+/********************************************
+END footer
+********************************************/
+.filter-buttons ul,
+.sorting-buttons ul {
+  margin: 0; }
+
+.items-list {
+  margin-top: 20px;
+  margin-bottom: 20px; }
+
+.item {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-flow: column;
+  line-height: 1.2; }
+  .item .photo-and-price {
+    position: relative; }
+    .item .photo-and-price img {
+      width: 100%; }
+    .item .photo-and-price .price {
+      position: absolute;
+      bottom: 5px;
+      left: -1px;
+      background: #0099d2;
+      color: white;
+      font-size: 1.2em;
+      padding: 5px 10px; }
+      .item .photo-and-price .price::after {
+        content: "";
+        position: absolute;
+        margin-top: -15px;
+        margin-right: -10px;
+        right: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-top: 15px solid #0099d2;
+        border-right: 10px solid transparent;
+        border-bottom: 15px solid #0099d2; }
+  .item .item-name {
+    font-weight: bold;
+    padding: 10px 10px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical; }
+    .item .item-name a {
+      color: #333; }
+  .item .seller-info {
+    padding: 5px 10px 10px;
+    margin: 0; }
+
+/********************************************
+BEGIN page index
+********************************************/
+.promotion {
+  position: relative;
+  padding-bottom: 35px; }
+  .promotion .promo-girl {
+    position: absolute;
+    bottom: -50px; }
+    @media screen and (max-width: 1220px) {
+      .promotion .promo-girl {
+        width: 350px;
+        bottom: -39px; } }
+    @media screen and (max-width: 767px) {
+      .promotion .promo-girl {
+        display: none; } }
+  .promotion .promo-text h2 {
+    font-size: 28px; }
+    @media screen and (max-width: 768px) {
+      .promotion .promo-text h2 {
+        font-size: 24px; } }
+  .promotion .promo-text .btn {
+    display: block;
+    margin: 0 auto;
+    width: 160px;
+    text-align: center; }
+
+/********************************************
+END page index
+********************************************/
+/********************************************
+BEGIN single item page
+********************************************/
+.single-item-info {
+  padding-top: 20px;
+  padding-bottom: 20px; }
+  .single-item-info .important-notes .uk-flex > *:first-child {
+    flex: 0 1 100px; }
+  .single-item-info .important-notes .uk-flex > *:nth-child(2) {
+    flex: 1 1; }
+  .single-item-info .important-notes .uk-flex p {
+    margin: 5px 0; }
+  .single-item-info ul.uk-slideshow li {
+    height: 300px;
+    background: 50% 50%/cover no-repeat; }
+    .single-item-info ul.uk-slideshow li a {
+      display: block;
+      width: 100%;
+      height: 100%; }
+  .single-item-info form span {
+    font-size: 20px; }
+  .single-item-info form select {
+    display: inline-block;
+    margin: 0 15px; }
+  .single-item-info form p i {
+    text-indent: 25px; }
+  .single-item-info form .btn {
+    margin: 0 15px; }
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  background: #F8F7F6;
+  color: black;
+  border: 1px solid #c5c5c5;
+  font-weight: normal; }
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid #00749f;
+  background: #fff;
+  color: #0099d2; }
+
+/* begin: jQuery UI Datepicker moving pixels fix */
+table.ui-datepicker-calendar {
+  border-collapse: separate; }
+
+.ui-datepicker-calendar td {
+  border: 1px solid transparent; }
+
+/* end: jQuery UI Datepicker moving pixels fix */
+/* begin: jQuery UI Datepicker emphasis on selected dates */
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+  background: #0099d2 none;
+  color: white; }
+
+/* end: jQuery UI Datepicker emphasis on selected dates */
+/* begin: jQuery UI Datepicker hide datepicker helper */
+#ui-datepicker-div {
+  display: none; }
+
+/* end: jQuery UI Datepicker hide datepicker helper */
+.ui-corner-all {
+  border-radius: 0; }
+
+/********************************************
+END single item page
+********************************************/
+
+/*# sourceMappingURL=styles.css.map */

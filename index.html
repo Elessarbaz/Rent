@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rent24</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!--BEGIN header (logo and navbar)-->
+  <header class="uk-container uk-container-center uk-grid uk-grid-match uk-margin-top">
+    <div class="uk-width-medium-3-10">
+      <div>
+        <a href="index.html"><img src="img/logo.png" class="sm-center" alt="Logo">
+        </a></div>
+    </div>
+    <nav class="uk-nav uk-width-medium-7-10 uk-flex uk-flex-bottom uk-flex-right">
+      <ul class="uk-navbar-nav uk-hidden-small">
+        <li class="uk-active"><a href="index.html">Главная</a></li>
+        <li><a href="">О нас</a></li>
+        <li><a href="">Каталог вещей</a></li>
+        <li><a href="">Популярное</a></li>
+        <li><a href="">Рейтинг</a></li>
+        <li><a href="">Контакты</a></li>
+        <li><a href="">Войти</a></li>
+      </ul>
+      <!--BEGIN sidebar(off-canvas) button (appears on display < 768px)-->
+      <div>
+        <a href="#sidebar-menu" class="uk-navbar-toggle uk-visible-small"
+               data-uk-offcanvas="{target:'#sidebar-menu'}"></a>
+      </div>
+      <!--END sidebar(off-canvas) button (appears on display < 768px)-->
+
+    </nav>
+  </header>
+  <!--END header (logo and navbar)-->
+  <!--BEGIN sidebar-->
+  <div id="sidebar-menu" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+        <li class="uk-active"><a href="index.html">Главная</a></li>
+        <li><a href="">О нас</a></li>
+        <li><a href="">Каталог вещей</a></li>
+        <li><a href="">Популярное</a></li>
+        <li><a href="">Рейтинг</a></li>
+        <li><a href="">Контакты</a></li>
+        <li><a href="">Войти</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--END sidebar-->
+
+  <!--BEGIN girl and promotion text-->
+  <div class="uk-container uk-container-center uk-grid uk-margin-top promotion">
+    <div class="uk-width-medium-4-10">
+      <img class="promo-girl" src="img/girl.png" alt="Promo girl">
+    </div>
+    <div class="promo-text uk-width-medium-6-10">
+      <h2>Взять вещи в аренду —<br> просто, как раз-два-три</h2>
+      <p>Некоторые вещи стоят довольно дорого, а используются только время от времени —
+        так зачем покупать их, если можно взять в аренду?<br><br>
+
+        Rent24.kz — простой и удобный сервис для аренды вещей с рейтингом, гарантией и многим другим.</p>
+      <a href="" class="btn">Зарегистрироваться</a>
+    </div>
+  </div>
+  <!--END girl and promotion text-->
+
+  <!--BEGIN search form-->
+  <div class="search-bar-container">
+    <div class="uk-container uk-container-center">
+      <form class="search-form">
+        <label class="uk-form-label" for="search">Я ищу...</label>
+        <input type="text" id="search" placeholder="Бензиновый снегоуборщик">
+        <input class="btn" type="submit" value="Найти">
+      </form>
+    </div>
+  </div>
+  <!--END search form-->
+
+  <!--
+  "filter buttons" и "sorting buttons" связаны со списком товаров (items-list). filter buttons фильтрует список по категориям, а sorting buttons сортирует. Подробнее о принципе их работы на: https://getuikit.com/v2/docs/grid-js.html
+  Порядок по умолчанию здесь - по дате последнего добавления(data-date), поэтому из бэкэнда нужно выводить в порядке убывания милисекунд data-date.
+  -->
+  <!--BEGIN filter buttons-->
+  <div class="filter-buttons uk-container uk-container-center">
+    <ul class="uk-subnav uk-subnav-pill items-sort-filter">
+      <li data-uk-filter="" class="uk-active"><a href="">Всё</a></li>
+      <li data-uk-filter="transport"><a href="">Транспорт</a></li>
+      <li data-uk-filter="clothes"><a href="">Одежда</a></li>
+      <li data-uk-filter="hobbies-sports"><a href="">Хобби/Спорт</a></li>
+      <li data-uk-filter="real-estate"><a href="">Недвижимость</a></li>
+      <li data-uk-filter="electronics"><a href="">Электроника</a></li>
+      <li data-uk-filter="children"><a href="">Детское</a></li>
+    </ul>
+  </div>
+  <!--END filter buttons-->
+  <!--BEGIN sorting buttons-->
+  <div class="sorting-buttons uk-container uk-container-center">
+    <ul class="uk-subnav items-sort-filter">
+      <li data-uk-sort="date:desc" class="uk-active"><a href="">Сначала последние</a></li>
+      <li data-uk-sort="price"><a href="">По цене <i class="uk-icon-arrow-down"></i></a></li>
+      <li data-uk-sort="price:desc"><a href="">По цене <i class="uk-icon-arrow-up"></i></a></li>
+    </ul>
+  </div>
+  <!--END sorting buttons-->
+  <!--BEGIN items-list-->
+  <div class="items-list uk-container uk-container-center">
+    <div class="uk-grid-width-small-1-2 uk-grid-width-medium-1-3 uk-grid-width-large-1-4" data-uk-grid="{gutter: 10, controls: '.items-sort-filter'}">
+
+      <!--BEGIN snowboard-->
+      <div class="item-wrapper" data-date="12" data-price="1000" data-uk-filter="hobbies-sports">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_snowboard.jpg" alt="Snowboard"></a>
+            <div class="price">1000тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Сноуборд с крепежами и обувью</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_angry_bird.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Сергей</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END snowboard-->
+
+      <!--BEGIN bmw-->
+      <div class="item-wrapper" data-date="11" data-price="18000" data-uk-filter="transport">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_bmw.jpg" alt="BMW"></a>
+            <div class="price">18000тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">BMW 328i X-drive</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_stalker.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Арман</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END bmw-->
+
+      <!--BEGIN guitar-->
+      <div class="item-wrapper" data-date="10" data-price="900" data-uk-filter="hobbies-sports">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_guitar.jpg" alt="Guitar"></a>
+            <div class="price">900тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Гитара испанская семиструнная, требуется настройка, отличный звук</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_angry_bird.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Сергей</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END guitar-->
+
+      <!--BEGIN mercedes-benz-->
+      <div class="item-wrapper" data-date="09" data-price="25000" data-uk-filter="transport">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href="single-item.html"><img src="img/item_mercedes_benz.jpg" alt="Mercedes"></a>
+            <div class="price">25000тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Mercedes-Benz GLE300 4Matic</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_skyrim.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Нурлан</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END mercedes-benz-->
+
+      <!--BEGIN baby buggy-->
+      <div class="item-wrapper" data-date="08" data-price="1200" data-uk-filter="children">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_baby_buggy" alt="Baby buggy"></a>
+            <div class="price">1200тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Детская коляска</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_stalker.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Арман</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END baby buggy-->
+
+      <!--BEGIN house-->
+      <div class="item-wrapper" data-date="07" data-price="5500" data-uk-filter="real-estate">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_house" alt="House"></a>
+            <div class="price">5500тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Дача на Алмарасане</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_angry_bird.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Сергей</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END house-->
+
+      <!--BEGIN tablet-->
+      <div class="item-wrapper" data-date="06" data-price="1200" data-uk-filter="electronics">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_tablet" alt="Tablet"></a>
+            <div class="price">1200тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Планшет на базе Android</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_skyrim.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Нурлан</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END tablet-->
+
+      <!--BEGIN earrings-->
+      <div class="item-wrapper" data-date="05" data-price="2000" data-uk-filter="clothes">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_earrings.jpg" alt="Earrings"></a>
+            <div class="price">2000тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Серьги. Серебро + Изумруд</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_smile.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Алтынай</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END earrings-->
+
+      <!--BEGIN kids' electric car-->
+      <div class="item-wrapper" data-date="04" data-price="5000" data-uk-filter="transport, children">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_kids_ev.jpg" alt="Kid's EV"></a>
+            <div class="price">5000тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Детский электромобиль</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_smile.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Алтынай</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END kids' electric car-->
+
+      <!--BEGIN dress-->
+      <div class="item-wrapper" data-date="03" data-price="2000" data-uk-filter="clothes">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_dress.jpg" alt="Dress"></a>
+            <div class="price">2500тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Платье летнее</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_smile.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Алтынай</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END dress-->
+
+      <!--BEGIN warm clothes-->
+      <div class="item-wrapper" data-date="02" data-price="1000" data-uk-filter="clothes">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_warm_clothes.jpg" alt="Clothes"></a>
+            <div class="price">1000тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Комплект тёплой зимней одежды</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_angry_bird.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Сергей</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+                <i class="uk-icon-star-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END warm clothes-->
+
+      <!--BEGIN books for children-->
+      <div class="item-wrapper" data-date="01" data-price="400" data-uk-filter="children">
+        <div class="item">
+          <div class="photo-and-price">
+            <a href=""><img src="img/item_kids_books.jpg" alt="Books"></a>
+            <div class="price">400тг / день</div>
+          </div>
+          <div class="item-name">
+            <a href="single-item.html">Набор детские книжки на выбор</a>
+          </div>
+          <div class="seller-info">
+            <img class="avatar" src="img/avatar_stalker.jpg" alt="Аватар">
+            <div>
+              <span class="seller-name">Арман</span>
+              <div>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star"></i>
+                <i class="uk-icon-star-half-o"></i>
+              </div>
+              <a href="" class="uk-button-link">Отзывы арендаторов</a>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--END books for children-->
+
+    </div>
+  </div>
+  <!--END items-list-->
+
+  <!--BEGIN pagination-->
+  <ul class="uk-pagination">
+    <li class="uk-disabled"><span><i class="uk-icon-angle-double-left"></i></span></li>
+    <li class="uk-active"><span>1</span></li>
+    <li><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+    <li><a href="#">6</a></li>
+    <li><a href="#">7</a></li>
+    <li><a href="#">...</a></li>
+    <li><a href=""><i class="uk-icon-angle-double-right"></i></a></li>
+  </ul>
+  <!--END pagination-->
+
+  <footer>
+    <div class="uk-container uk-container-center">
+      <h2>Меню</h2>
+      <div class="uk-grid">
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">О нас</a></li>
+          <li><a href="">Каталог вещей</a></li>
+          <li><a href="">Популярное</a></li>
+          <li><a href="">Рейтинг</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Как это работает?</a></li>
+          <li><a href="">Ответы на вопросы</a></li>
+          <li><a href="">Претензии по вещи</a></li>
+          <li><a href="">Арбитраж</a></li>
+          <li><a href="">Статистика</a></li>
+          <li><a href="">Обратная связь</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Регистрация на портале</a></li>
+          <li><a href="">Восстановление доступа</a></li>
+          <li><a href="">Свзязаться с поддержкой</a></li>
+          <li><a href="">У меня идея!</a></li>
+          <li><a href="">Сотрудничество</a></li>
+          <li><a href="">Реклама на портале</a></li>
+          <li><a href="">Карта сайта</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Политика использования</a></li>
+          <li><a href="">Пользовательское соглашение</a></li>
+        </ul>
+      </div>
+      <p class="copyright-note">&copy; Rent24.kz 2017 // Все права защищены<p>
+    </div>
+  </footer>
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+  <script src="node_modules/uikit/dist/js/components/grid.min.js"></script>
+</body>
+</html>

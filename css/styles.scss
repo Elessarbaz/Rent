@@ -1,0 +1,374 @@
+$main-color: #0099d2; //фирменный синий
+
+/********************************************
+BEGIN переопределение стилей браузера и uikit
+********************************************/
+a {
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+//перепишем стили uikit, чтобы не растягивалась картинка внутри .uk-grid-match:
+.uk-grid-match>*>img {
+  width: auto;
+}
+
+//перепишем цвет шрифта nav-элементов uikit
+.uk-navbar-nav>li>a,
+.uk-navbar-nav>li>a:hover,
+.uk-navbar-nav>li.uk-active>a {
+  color: $main-color;
+}
+
+//конпка вызова sidebar-menu
+a.uk-navbar-toggle {
+  position: fixed;
+  border: 1px solid #ccc;
+  top: 10px;
+  left: 10px;
+  z-index: 100;
+  height: 30px;
+  padding: 0 10px;
+  background: rgb(255,255,255);
+}
+/********************************************
+END переопределение стилей браузера и uikit
+********************************************/
+
+/********************************************
+BEGIN общие стили
+********************************************/
+
+//серый
+.gray {
+  color: #cccccc;
+}
+
+//класс для центровки при мобильном экране
+.sm-center {
+  @media screen and (max-width: 768px) {
+    margin: 0 auto;
+    display: block;
+  }
+}
+
+//button общий стиль
+.btn {
+  cursor: pointer;
+  background: white;
+  border: 2px solid $main-color;
+  display: inline-block;
+  color: $main-color;
+  font-size: 16px;
+  padding: 10px 15px;
+  transition: .5s;
+  &:hover {
+    background: $main-color;
+    color: white;
+  }
+  &:active {
+    background: lighten($main-color, 10);
+  }
+}
+
+//Контейнер формы поиска
+.search-bar-container {
+  padding: 20px;
+  border-bottom: 2px #ccc solid;
+  //Главная форма поиска
+  .search-form {
+    display: flex;
+    flex-flow: row wrap;
+    font-size: 16px;
+    @media screen and (max-width: 768px) {
+      flex-flow: column wrap;
+    }
+    label {
+      flex: 0 0 auto;
+      align-self: center;
+    }
+    input[type=text] {
+      flex: 1 1 auto;
+      margin: 0 10px;
+      font-size: 16px;
+      padding: 0 10px;
+      @media screen and (max-width: 768px) {
+        margin: 10px 0;
+        padding: 10px;
+      }
+    }
+    input[type=submit] {
+      flex: 0 0 200px;
+      @media screen and (max-width: 768px) {
+        flex-basis: auto;
+      }
+    }
+  }
+}
+
+//Если Контейнер формы поиска на главной странице (т.е. после блока .promotion), то:
+.promotion + .search-bar-container {
+  padding: 55px 0 25px;
+  background: #eeeeee;
+  box-shadow: 0px -10px 30px -10px rgba(0,0,0,0.3);
+}
+
+//Информация о продавце
+.seller-info {
+  display: flex;
+  padding: 0;
+  margin: 10px 0;
+  line-height: 1.2;
+  .seller-name {
+    font-weight: bold;
+    color: #666666;
+  }
+  img.avatar {
+    height: 50px;
+    width: 50px;
+    margin-right: 10px;
+  }
+}
+/********************************************
+END общие стили
+********************************************/
+
+/********************************************
+BEGIN footer
+********************************************/
+footer {
+  background: #333;
+  color: white;
+  padding: 30px 0;
+
+  h2 {
+    color: white;
+  }
+  li {
+    list-style: none;
+    a {
+      color: white;
+      &:hover {
+        color: white;
+        text-decoration: underline;
+      }
+    }
+  }
+  .copyright-note {
+    margin: 30px 0 0;
+  }
+}
+/********************************************
+END footer
+********************************************/
+
+//BEGIN filter/sorting buttons
+.filter-buttons,
+.sorting-buttons {
+  ul {
+    margin: 0;
+  }
+}
+//END filter/sorting buttons
+
+//BEGIN items-list
+.items-list {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.item {
+  border: 1px solid #ccc;
+  display: flex;
+  flex-flow: column;
+  line-height: 1.2;
+  .photo-and-price {
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .price {
+      position: absolute;
+      bottom: 5px;
+      left: -1px;
+      background: $main-color;
+      color: white;
+      font-size: 1.2em;
+      padding: 5px 10px;
+
+      //прозрачный треугольник после прайса
+      &::after {
+        content: "";
+        position: absolute;
+        margin-top: -15px;
+        margin-right: -10px;
+        right: 0;
+        top: 50%;
+        width: 0;
+        height: 0;
+        border-top: 15px solid $main-color;
+        border-right: 10px solid transparent;
+        border-bottom: 15px solid $main-color;
+      }
+    }
+  }
+  .item-name {
+    font-weight: bold;
+    padding: 10px 10px 5px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    a {
+      color: #333;
+    }
+  }
+  .seller-info { //стили seller-info см. общие стили
+    padding: 5px 10px 10px;
+    margin: 0;
+  }
+}
+//END items-list
+
+
+/********************************************
+BEGIN page index
+********************************************/
+
+//BEGIN girl and promotion text
+.promotion {
+  position: relative;
+  padding-bottom: 35px;
+  .promo-girl {
+    position: absolute;
+    bottom: -50px;
+    @media screen and (max-width: 1220px) {
+      width: 350px;
+      bottom: -39px;
+    }
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
+  }
+
+  .promo-text {
+    h2 {
+      font-size: 28px;
+      @media screen and (max-width: 768px) {
+        font-size: 24px;
+      }
+    }
+
+    .btn {
+      display: block;
+      margin: 0 auto;
+      width: 160px;
+      text-align: center;
+    }
+  }
+}
+//BEGIN girl and promotion text
+
+
+/********************************************
+END page index
+********************************************/
+
+/********************************************
+BEGIN single item page
+********************************************/
+
+
+.single-item-info {
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .important-notes {
+    .uk-flex {
+      & > *:first-child {
+        flex: 0 1 100px;
+      }
+      & > *:nth-child(2) {
+        flex: 1 1;
+      }
+      p {
+        margin: 5px 0;
+      }
+    }
+  }
+
+  ul.uk-slideshow {
+    li {
+      height: 300px;
+      background: 50% 50%/cover no-repeat;
+      a {
+        display: block;
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  form {
+    span {
+      font-size: 20px;
+    }
+    select {
+      display: inline-block;
+      margin: 0 15px;
+    }
+    p i {
+      text-indent: 25px;
+    }
+    .btn {
+      margin: 0 15px;
+    }
+  }
+}
+
+
+//BEGIN calendar
+
+.ui-state-active,
+.ui-widget-content .ui-state-active,
+.ui-widget-header .ui-state-active {
+  background: #F8F7F6;
+  color: black;
+  border: 1px solid #c5c5c5;
+  font-weight: normal;
+}
+
+.ui-state-highlight,
+.ui-widget-content .ui-state-highlight,
+.ui-widget-header .ui-state-highlight {
+  border: 1px solid darken($main-color,10);
+  background: #fff;
+  color: $main-color;
+}
+
+/* begin: jQuery UI Datepicker moving pixels fix */
+table.ui-datepicker-calendar {border-collapse: separate;}
+.ui-datepicker-calendar td {border: 1px solid transparent;}
+/* end: jQuery UI Datepicker moving pixels fix */
+
+/* begin: jQuery UI Datepicker emphasis on selected dates */
+.ui-datepicker .ui-datepicker-calendar .ui-state-highlight a {
+  background:$main-color none;
+  color: white;
+}
+/* end: jQuery UI Datepicker emphasis on selected dates */
+/* begin: jQuery UI Datepicker hide datepicker helper */
+#ui-datepicker-div {display:none;}
+/* end: jQuery UI Datepicker hide datepicker helper */
+
+.ui-corner-all {
+  border-radius: 0;
+}
+//END calendar
+
+
+/********************************************
+END single item page
+********************************************/
+
