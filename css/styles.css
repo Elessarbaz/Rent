@@ -2,6 +2,9 @@
 /********************************************
 BEGIN переопределение стилей браузера и uikit
 ********************************************/
+* {
+  box-sizing: border-box; }
+
 a:hover {
   text-decoration: none; }
 
@@ -30,7 +33,7 @@ END переопределение стилей браузера и uikit
 BEGIN общие стили
 ********************************************/
 .gray {
-  color: #cccccc; }
+  color: #777777; }
 
 @media screen and (max-width: 768px) {
   .sm-center {
@@ -123,6 +126,56 @@ footer {
 /********************************************
 END footer
 ********************************************/
+/********************************************
+BEGIN modal windows
+********************************************/
+.uk-modal-dialog {
+  width: 500px;
+  padding: 30px;
+  font-size: 16px; }
+  .uk-modal-dialog input:not([type="submit"]) {
+    font-size: 20px;
+    height: auto;
+    padding: 10px; }
+  .uk-modal-dialog .btn {
+    color: #0099d2; }
+    .uk-modal-dialog .btn:hover {
+      color: white; }
+  .uk-modal-dialog .flex-row {
+    display: flex; }
+    .uk-modal-dialog .flex-row > * {
+      flex: 1 1;
+      display: flex;
+      justify-content: center;
+      align-items: center; }
+  .uk-modal-dialog .uk-modal-footer {
+    background: #0099d2;
+    color: white;
+    padding: 20px 30px 30px 30px;
+    margin: 20px -30px -30px -30px; }
+    .uk-modal-dialog .uk-modal-footer ::-webkit-input-placeholder {
+      color: white; }
+    .uk-modal-dialog .uk-modal-footer :-moz-placeholder {
+      color: white; }
+    .uk-modal-dialog .uk-modal-footer ::-moz-placeholder {
+      color: white; }
+    .uk-modal-dialog .uk-modal-footer :-ms-input-placeholder {
+      color: white; }
+    .uk-modal-dialog .uk-modal-footer input:not([type="submit"]) {
+      border-color: white;
+      color: white;
+      background: #0099d2; }
+    .uk-modal-dialog .uk-modal-footer .btn {
+      border-color: white;
+      background: #0099d2;
+      color: white; }
+      .uk-modal-dialog .uk-modal-footer .btn:hover {
+        color: #0099d2;
+        background: white; }
+
+/********************************************
+END modal windows
+********************************************/
 .filter-buttons ul,
 .sorting-buttons ul {
   margin: 0; }
@@ -196,10 +249,10 @@ BEGIN page index
       .promotion .promo-text h2 {
         font-size: 24px; } }
   .promotion .promo-text .btn {
-    display: block;
-    margin: 0 auto;
-    width: 160px;
     text-align: center; }
+    @media screen and (max-width: 1220px) {
+      .promotion .promo-text .btn {
+        display: block; } }
 
 /********************************************
 END page index

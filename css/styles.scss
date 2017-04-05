@@ -1,8 +1,18 @@
 $main-color: #0099d2; //фирменный синий
 
+@mixin placeholder {
+  ::-webkit-input-placeholder {@content}
+  :-moz-placeholder           {@content}
+  ::-moz-placeholder          {@content}
+  :-ms-input-placeholder      {@content}
+} // placeholder mixin
+
 /********************************************
 BEGIN переопределение стилей браузера и uikit
 ********************************************/
+* {
+  box-sizing: border-box;
+}
 a {
   &:hover {
     text-decoration: none;
@@ -42,7 +52,7 @@ BEGIN общие стили
 
 //серый
 .gray {
-  color: #cccccc;
+  color: #777777;
 }
 
 //класс для центровки при мобильном экране
@@ -163,6 +173,62 @@ footer {
 END footer
 ********************************************/
 
+/********************************************
+BEGIN modal windows
+********************************************/
+//уменьшим размеры стандартоного модального окна uikit
+.uk-modal-dialog {
+  width: 500px;
+  padding: 30px;
+  font-size: 16px;
+  input:not([type="submit"]) {
+    font-size: 20px;
+    height: auto;
+    padding: 10px;
+  }
+  .btn {
+    color: $main-color;
+    &:hover {
+      color: white;
+    }
+  }
+  .flex-row {
+    display: flex;
+    & > * {
+      flex: 1 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  .uk-modal-footer {
+    background: $main-color;
+    color: white;
+    padding: 20px 30px 30px 30px;
+    margin: 20px -30px -30px -30px;
+    @include placeholder { // include placeholder mixin
+      color: white;
+    }
+    input:not([type="submit"]) {
+      border-color: white;
+      color: white;
+      background: $main-color;
+    }
+    .btn {
+      border-color: white;
+      background: $main-color;
+      color: white;
+      &:hover {
+        color: $main-color;
+        background: white;
+      }
+    }
+  }
+}
+/********************************************
+END modal windows
+********************************************/
+
 //BEGIN filter/sorting buttons
 .filter-buttons,
 .sorting-buttons {
@@ -261,10 +327,11 @@ BEGIN page index
     }
 
     .btn {
-      display: block;
-      margin: 0 auto;
-      width: 160px;
       text-align: center;
+      @media screen and (max-width: 1220px) {
+        display: block;
+      }
+
     }
   }
 }
