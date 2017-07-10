@@ -16,48 +16,55 @@
 </head>
 <body>
 
-  <!--BEGIN header (logo and navbar)-->
-  <header class="uk-container uk-container-center uk-grid uk-grid-match uk-margin-top">
-    <div class="uk-width-medium-3-10">
-      <div>
-        <a href="index.html"><img src="img/logo.png" class="sm-center" alt="Logo">
-        </a></div>
+<!--BEGIN header (logo and navbar)-->
+<header data-uk-sticky="{top:-300, animation: 'uk-animation-slide-top'}">
+  <div class="uk-container uk-container-center uk-grid uk-grid-match">
+    <div class="uk-width-medium-2-10">
+      <a href="index.html"><img src="img/logo.png" class="sm-center" alt="Logo">
+      </a>
     </div>
-    <nav class="uk-nav uk-width-medium-7-10 uk-flex uk-flex-bottom uk-flex-right">
+    <nav class="uk-nav uk-width-medium-8-10">
       <ul class="uk-navbar-nav uk-hidden-small">
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="">О нас</a></li>
-        <li><a href="">Каталог вещей</a></li>
-        <li><a href="">Популярное</a></li>
-        <li><a href="">Рейтинг</a></li>
-        <li><a href="">Контакты</a></li>
-        <li><a href="">Войти</a></li>
+        <li class="uk-active"><a href="index.html">Каталог</a></li>
+        <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+        <li><a href="">Мои вещи (3)</a></li>
+        <li><a href="">Сообщения (12)</a></li>
+        <li><a href="">Кошелёк (144,000тг)</a></li>
+        <li><a href="">Настройки</a></li>
+        <li><a href="">Помощь</a></li>
+        <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+        <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+        <li>
+          <img src="img/avatar_skyrim.jpg" class="avatar">
+        </li>
       </ul>
+
       <!--BEGIN sidebar(off-canvas) button (appears on display < 768px)-->
       <div>
         <a href="#sidebar-menu" class="uk-navbar-toggle uk-visible-small"
-               data-uk-offcanvas="{target:'#sidebar-menu'}"></a>
+           data-uk-offcanvas="{target:'#sidebar-menu'}"></a>
       </div>
       <!--END sidebar(off-canvas) button (appears on display < 768px)-->
-
     </nav>
-  </header>
-  <!--END header (logo and navbar)-->
-  <!--BEGIN sidebar-->
-  <div id="sidebar-menu" class="uk-offcanvas">
-    <div class="uk-offcanvas-bar">
-      <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
-        <li><a href="index.html">Главная</a></li>
-        <li><a href="">О нас</a></li>
-        <li><a href="">Каталог вещей</a></li>
-        <li><a href="">Популярное</a></li>
-        <li><a href="">Рейтинг</a></li>
-        <li><a href="">Контакты</a></li>
-        <li><a href="">Войти</a></li>
-      </ul>
-    </div>
+
   </div>
-  <!--END sidebar-->
+</header>
+<!--END header (logo and navbar)-->
+<!--BEGIN sidebar-->
+<div id="sidebar-menu" class="uk-offcanvas">
+  <div class="uk-offcanvas-bar">
+    <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+      <li class="uk-active"><a href="index.html">Каталог</a></li>
+      <li><a href="">Мои вещи (3)</a></li>
+      <li><a href="">Сообщения (12)</a></li>
+      <li><a href="">Кошелёк (144,000тг)</a></li>
+      <li><a href="">Настройки</a></li>
+      <li><a href="">Помощь</a></li>
+      <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+    </ul>
+  </div>
+</div>
+<!--END sidebar-->
 
   <!--BEGIN search form-->
   <div class="search-bar-container">

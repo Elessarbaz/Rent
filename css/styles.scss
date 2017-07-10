@@ -24,11 +24,32 @@ a {
   width: auto;
 }
 
-//перепишем цвет шрифта nav-элементов uikit
+//перепишем цвет пунктов меню uikit
 .uk-navbar-nav>li>a,
 .uk-navbar-nav>li>a:hover,
 .uk-navbar-nav>li.uk-active>a {
-  color: $main-color;
+  color: white;
+  height: 50px;
+  line-height: 50px;
+}
+
+//активный пункт меню:
+.uk-navbar-nav>li.uk-active>a {
+  background: none;
+  font-weight: bold;
+}
+
+//hover пункта меню
+.uk-navbar-nav>li.uk-open>a,
+.uk-navbar-nav>li:hover>a,
+.uk-navbar-nav>li>a:focus {
+  color: white;
+  background: lighten($main-color, 10);
+}
+
+//убераем подсветку при hover для разделитителей пунктов меню | :
+.uk-navbar-nav>li:hover>a.uk-padding-remove {
+  background: $main-color;
 }
 
 //конпка вызова sidebar-menu
@@ -143,7 +164,20 @@ BEGIN общие стили
 /********************************************
 END общие стили
 ********************************************/
+/********************************************
+BEGIN header
+********************************************/
+header {
+  background: $main-color;
 
+  .avatar {
+    width: 50px;
+    margin: 0;
+  }
+}
+/********************************************
+END header
+********************************************/
 /********************************************
 BEGIN footer
 ********************************************/
