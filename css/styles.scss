@@ -472,4 +472,39 @@ table.ui-datepicker-calendar {border-collapse: separate;}
 /********************************************
 END single item page
 ********************************************/
+/********************************************
+BEGIN add item page
+********************************************/
+.add-item {
+  padding-top: 20px;
+  padding-bottom: 20px;
 
+  .uk-width-medium-2-10 {
+    display: flex;
+    align-items: center;
+  }
+
+  .uk-grid .uk-width-medium-2-10 {
+    justify-content: flex-end;
+  }
+
+  label {
+    margin: 8px 0;
+  }
+
+  input, select, textarea {
+    width: 100%;
+    font-size: 16px;
+    padding: 8px;
+    background: white;
+    margin: 10px 0;
+    resize: none;
+  }
+
+
+}
+
+
+/********************************************
+END add item page
+********************************************/

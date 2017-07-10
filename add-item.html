@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Rent24 Add Item</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
+  <link rel="stylesheet" href="node_modules/uikit/dist/css/components/sticky.almost-flat.min.css">
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+  <!--BEGIN header (logo and navbar)-->
+  <header data-uk-sticky="{top:-300, animation: 'uk-animation-slide-top'}">
+    <div class="uk-container uk-container-center uk-grid uk-grid-match">
+      <div class="uk-width-medium-2-10">
+        <a href="index.html"><img src="img/logo.png" class="sm-center" alt="Logo">
+        </a>
+      </div>
+      <nav class="uk-nav uk-width-medium-8-10">
+        <ul class="uk-navbar-nav uk-hidden-small">
+          <li class="uk-active"><a href="index.html">Каталог</a></li>
+          <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+          <li><a href="">Мои вещи (3)</a></li>
+          <li><a href="">Сообщения (12)</a></li>
+          <li><a href="">Кошелёк (144,000тг)</a></li>
+          <li><a href="">Настройки</a></li>
+          <li><a href="">Помощь</a></li>
+          <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+          <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+          <li>
+              <img src="img/avatar_skyrim.jpg" class="avatar">
+          </li>
+        </ul>
+
+        <!--BEGIN sidebar(off-canvas) button (appears on display < 768px)-->
+        <div>
+          <a href="#sidebar-menu" class="uk-navbar-toggle uk-visible-small"
+             data-uk-offcanvas="{target:'#sidebar-menu'}"></a>
+        </div>
+        <!--END sidebar(off-canvas) button (appears on display < 768px)-->
+      </nav>
+
+    </div>
+  </header>
+  <!--END header (logo and navbar)-->
+  <!--BEGIN sidebar-->
+  <div id="sidebar-menu" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+      <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+        <li class="uk-active"><a href="index.html">Каталог</a></li>
+        <li><a href="">Мои вещи (3)</a></li>
+        <li><a href="">Сообщения (12)</a></li>
+        <li><a href="">Кошелёк (144,000тг)</a></li>
+        <li><a href="">Настройки</a></li>
+        <li><a href="">Помощь</a></li>
+        <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+      </ul>
+    </div>
+  </div>
+  <!--END sidebar-->
+
+  <!--BEGIN add item-->
+  <div class="add-item uk-container uk-container-center">
+    <h1>Добавить вещь</h1>
+    <div class="uk-grid">
+
+      <div class="uk-width-medium-2-10">
+        <label>Что вы сдаёте в аренду?</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <input type="text" placeholder="Название объекта">
+      </div>
+
+      <div class="uk-width-medium-2-10">
+        <label>Выберите категорию</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <select>
+          <option value="">Категория</option>
+          <option value="">Категория 2</option>
+        </select>
+      </div>
+
+      <div class="uk-width-medium-2-10">
+        <label>Почему арендатор должен арендовать эту вещь именно у вас?
+
+        Чем она лучше аналогичных и почему ему или ей нужна именно такая?</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <textarea name="" cols="30" rows="10" placeholder="Описание"></textarea>
+      </div>
+
+
+      <div class="uk-width-medium-2-10">
+        <label>Немного технических моментов...</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <div class="uk-grid">
+          <div class="uk-width-medium-2-10">
+            <label>Состояние</label>
+          </div>
+          <div class="uk-width-medium-3-10">
+            <select>
+              <option value="">Удовлетворительное</option>
+              <option value="">Хорошее</option>
+            </select>
+          </div>
+          <div class="uk-width-medium-2-10">
+            <label>Стоимость выкупа, тг.</label>
+          </div>
+          <div class="uk-width-medium-3-10">
+            <input type="text" placeholder="0">
+          </div>
+        </div>
+      </div>
+
+      <div class="uk-width-medium-2-10">
+        <label>Почти у каждого владельца есть особые пожелания по условиям аренды - здесь вы можете изложить их в доступной форме, чтобы арендатор сразу мог решить, подходит ли ему ваш вариант, и вы оба не тратили своё время, если нет.</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <textarea name="" rows="10" placeholder="Условия аренды"></textarea>
+      </div>
+
+      <div class="uk-width-medium-2-10">
+        <label>Где находится вещь?</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <div class="uk-grid">
+          <div class="uk-width-medium-2-10">
+            <label>Город</label>
+          </div>
+          <div class="uk-width-medium-3-10">
+            <select>
+              <option value="">Алматы</option>
+              <option value="">Шымкент</option>
+            </select>
+          </div>
+          <div class="uk-width-medium-2-10">
+            <label>Район</label>
+          </div>
+          <div class="uk-width-medium-3-10">
+            <select>
+              <option value="">Жетысуйский</option>
+              <option value="">Ауэзовский</option>
+            </select>
+          </div>
+          <div class="uk-width-medium-2-10">
+            <label>Доставка</label>
+          </div>
+          <div class="uk-width-medium-3-10">
+            <select>
+              <option value="">Самовывоз</option>
+              <option value="">Курьером</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+
+
+
+    </div>
+  </div>
+  <!--END add item-->
+
+  <footer>
+    <div class="uk-container uk-container-center">
+      <h2>Меню</h2>
+      <div class="uk-grid">
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">О нас</a></li>
+          <li><a href="">Каталог вещей</a></li>
+          <li><a href="">Популярное</a></li>
+          <li><a href="">Рейтинг</a></li>
+          <li><a href="">Контакты</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Как это работает?</a></li>
+          <li><a href="">Ответы на вопросы</a></li>
+          <li><a href="">Претензии по вещи</a></li>
+          <li><a href="">Арбитраж</a></li>
+          <li><a href="">Статистика</a></li>
+          <li><a href="">Обратная связь</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Регистрация на портале</a></li>
+          <li><a href="">Восстановление доступа</a></li>
+          <li><a href="">Свзязаться с поддержкой</a></li>
+          <li><a href="">У меня идея!</a></li>
+          <li><a href="">Сотрудничество</a></li>
+          <li><a href="">Реклама на портале</a></li>
+          <li><a href="">Карта сайта</a></li>
+        </ul>
+        <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+          <li><a href="">Политика использования</a></li>
+          <li><a href="">Пользовательское соглашение</a></li>
+        </ul>
+      </div>
+      <p class="copyright-note">&copy; Rent24.kz 2017 // Все права защищены<p>
+    </div>
+  </footer>
+
+
+  <script src="node_modules/jquery/dist/jquery.min.js"></script>
+  <script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+  <script src="node_modules/uikit/dist/js/components/grid.min.js"></script>
+  <script src="node_modules/uikit/dist/js/components/sticky.min.js"></script>
+</body>
+</html>
