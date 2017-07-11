@@ -47,8 +47,11 @@ END переопределение стилей браузера и uikit
 /********************************************
 BEGIN общие стили
 ********************************************/
+.main-blue {
+  color: #0099d2; }
+
 .gray {
-  color: #777777; }
+  color: #777; }
 
 @media screen and (max-width: 768px) {
   .sm-center {
@@ -362,8 +365,8 @@ BEGIN add item page
   .add-item .uk-width-medium-2-10 {
     display: flex;
     align-items: center; }
-  .add-item .uk-grid .uk-width-medium-2-10 {
-    justify-content: flex-end; }
+  .add-item .uk-grid .uk-grid .uk-width-medium-2-10 {
+    justify-content: center; }
   .add-item label {
     margin: 8px 0; }
   .add-item input, .add-item select, .add-item textarea {
@@ -376,6 +379,43 @@ BEGIN add item page
 
 /********************************************
 END add item page
+********************************************/
+/********************************************
+BEGIN balance
+********************************************/
+.balance-page {
+  padding-top: 30px;
+  padding-bottom: 20px; }
+  .balance-page [class*=uk-width] {
+    padding-top: 10px;
+    padding-bottom: 10px; }
+  .balance-page ul.transactions {
+    padding-left: 0; }
+    .balance-page ul.transactions li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px; }
+      .balance-page ul.transactions li:nth-child(odd) {
+        background: #f3f3f3; }
+      .balance-page ul.transactions li.income {
+        list-style-image: url("../img/arrow-income.png"); }
+      .balance-page ul.transactions li.outcome {
+        list-style-image: url("../img/arrow-outcome.png"); }
+      .balance-page ul.transactions li span {
+        color: #777; }
+  .balance-page form {
+    line-height: 2; }
+    .balance-page form input.sum {
+      max-width: 100px; }
+    .balance-page form .big-text {
+      font-size: 20px; }
+    .balance-page form .btn {
+      padding: 0 20px 0 15px; }
+  .balance-page .text-big {
+    font-size: 35px; }
+
+/********************************************
+END balance
 ********************************************/
 
 /*# sourceMappingURL=styles.css.map */

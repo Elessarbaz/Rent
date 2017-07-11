@@ -24,7 +24,7 @@
           <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
           <li><a href="">Мои вещи (3)</a></li>
           <li><a href="">Сообщения (12)</a></li>
-          <li><a href="">Кошелёк (144,000тг)</a></li>
+          <li><a href="balance.html">Баланс (145,000тг)</a></li>
           <li><a href="">Настройки</a></li>
           <li><a href="">Помощь</a></li>
           <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
@@ -52,7 +52,7 @@
         <li class="uk-active"><a href="index.html">Каталог</a></li>
         <li><a href="">Мои вещи (3)</a></li>
         <li><a href="">Сообщения (12)</a></li>
-        <li><a href="">Кошелёк (144,000тг)</a></li>
+        <li><a href="balance.html">Баланс (145,000тг)</a></li>
         <li><a href="">Настройки</a></li>
         <li><a href="">Помощь</a></li>
         <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
@@ -63,8 +63,13 @@
 
   <!--BEGIN add item-->
   <div class="add-item uk-container uk-container-center">
-    <h1>Добавить вещь</h1>
     <div class="uk-grid">
+
+      <div class="uk-width-medium-2-10">
+      </div>
+      <div class="uk-width-medium-8-10">
+        <h2>Добавить вещь</h2>
+      </div>
 
       <div class="uk-width-medium-2-10">
         <label>Что вы сдаёте в аренду?</label>
@@ -142,7 +147,7 @@
           </div>
           <div class="uk-width-medium-3-10">
             <select>
-              <option value="">Жетысуйский</option>
+              <option value="">Жетысуский</option>
               <option value="">Ауэзовский</option>
             </select>
           </div>
@@ -158,9 +163,62 @@
         </div>
       </div>
 
+      <div class="uk-width-medium-2-10">
+        <label>Фотографии (не более 10)</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <a href="#/"><img src="img/add_photo.jpg" class="uk-margin-top"></a>
+        <a href="#/"><img src="img/add_photo.jpg" class="uk-margin-top"></a>
+        <a href="#/"><img src="img/add_photo.jpg" class="uk-margin-top"></a>
+      </div>
+    </div>
 
+    <hr class="uk-grid-divider">
 
+    <div class="uk-grid">
+      <div class="uk-width-medium-2-10">
+        <label>Цена вопроса</label>
+      </div>
+      <div class="uk-width-medium-8-10">
+        <div class="uk-grid">
+          <div class="uk-width-medium-2-10">
+            <label>Стоимость в день, тг</label>
+          </div>
+          <div class="uk-width-medium-3-10">
+            <input type="text" placeholder="0">
+          </div>
+          <div class="uk-width-medium-2-10">
+            <label>Минимальный срок аренды</label>
+          </div>
+          <div class="uk-width-medium-3-10">
+            <select>
+              <option value="">1 день</option>
+              <option value="">1 неделя</option>
+            </select>
+          </div>
+        </div>
+      </div>
+    </div>
 
+    <hr class="uk-grid-divider">
+
+    <div class="uk-grid">
+      <div class="uk-width-medium-2-10">
+      </div>
+      <div class="uk-width-medium-8-10">
+        <div class="uk-flex uk-flex-middle">
+          <button class="btn uk-margin-large-right">Разместить</button>
+          <a href="" class="uk-button-link">Очистить всё</a>
+        </div>
+      </div>
+      <div class="uk-width-medium-2-10">
+      </div>
+      <div class="uk-width-medium-8-10">
+        <p class="uk-margin-top">
+          Нажимая кнопку "Разместить", вы соглашаетесь с <a href="">правилами использования</a> сервиса Beru.rent. Размещая объявление, вы несёте ответственность за достоверность и актуальность описания, фотографий, оценки состояния и стоимости вещи.
+        </p>
+        <br>
+      </div>
     </div>
   </div>
   <!--END add item-->

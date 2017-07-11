@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent24 Balance</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/components/sticky.almost-flat.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!--BEGIN header (logo and navbar)-->
+<header data-uk-sticky="{top:-300, animation: 'uk-animation-slide-top'}">
+    <div class="uk-container uk-container-center uk-grid uk-grid-match">
+        <div class="uk-width-medium-2-10">
+            <a href="index.html"><img src="img/logo.png" class="sm-center" alt="Logo">
+            </a>
+        </div>
+        <nav class="uk-nav uk-width-medium-8-10">
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li class="uk-active"><a href="index.html">Каталог</a></li>
+                <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+                <li><a href="">Мои вещи (3)</a></li>
+                <li><a href="">Сообщения (12)</a></li>
+                <li><a href="balance.html">Баланс (145,000тг)</a></li>
+                <li><a href="">Настройки</a></li>
+                <li><a href="">Помощь</a></li>
+                <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+                <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+                <li>
+                    <img src="img/avatar_skyrim.jpg" class="avatar">
+                </li>
+            </ul>
+
+            <!--BEGIN sidebar(off-canvas) button (appears on display < 768px)-->
+            <div>
+                <a href="#sidebar-menu" class="uk-navbar-toggle uk-visible-small"
+                   data-uk-offcanvas="{target:'#sidebar-menu'}"></a>
+            </div>
+            <!--END sidebar(off-canvas) button (appears on display < 768px)-->
+        </nav>
+
+    </div>
+</header>
+<!--END header (logo and navbar)-->
+<!--BEGIN sidebar-->
+<div id="sidebar-menu" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+            <li class="uk-active"><a href="index.html">Каталог</a></li>
+            <li><a href="">Мои вещи (3)</a></li>
+            <li><a href="">Сообщения (12)</a></li>
+            <li><a href="balance.html">Баланс (145,000тг)</a></li>
+            <li><a href="">Настройки</a></li>
+            <li><a href="">Помощь</a></li>
+            <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+        </ul>
+    </div>
+</div>
+<!--END sidebar-->
+
+<!--BEGIN balance-->
+<div class="balance-page uk-container uk-container-center">
+    <div class="uk-grid">
+
+        <div class="uk-width-medium-2-10">
+            <h3>Баланс</h3>
+            <h2><img src="img/icon-purse.png"> 144 000 тг </h2>
+
+            <ul class="transactions">
+                <li class="income">1 050 тг <span>06.04.17</span></li>
+                <li class="income">1 550 тг <span>06.04.17</span></li>
+                <li class="outcome">50 тг <span>06.04.17</span></li>
+                <li class="income">2 700 тг <span>05.04.17</span></li>
+                <li class="outcome">50 тг <span>05.04.17</span></li>
+                <li class="income">620 тг <span>01.04.17</span></li>
+            </ul>
+            <a href="#/">История транзакций</a>
+        </div>
+        <div class="uk-width-medium-4-10">
+            <h3>Пополнить баланс</h3>
+            <form action="" class="uk-form">
+                <p>
+                    Я хочу пополнить баланс на <input class="sum" type="text" placeholder="0"> тг. <br>
+                    Вы можете пополнить баланс на сумму от 50 до 20000 тг. <br>
+                    <span class="big-text">Через систему Cloud Payments</span>
+                </p>
+                <button class="btn">
+                    <img src="img/icon-cloud.png" alt="" class="uk-margin-right"> Пополнить
+                </button>
+                <a href="#/"><img class="uk-margin-left" src="img/icon-visa.png"></a>
+                <a href="#/"><img class="uk-margin-left" src="img/icon-master-card.jpg"></a>
+            </form>
+        </div>
+        <div class="uk-width-medium-4-10">
+            <br class="uk-hidden-small">
+            <br class="uk-hidden-small">
+            <p>Рекумендуемая сумма - <a href="#/">150тг</a></p>
+            <br class="uk-hidden-small">
+            <br class="uk-hidden-small">
+            <p>Внимание! При пользовании системой взимается комиссия за услуги платежного сервиса Cloud Payments 10%</p>
+        </div>
+    </div>
+
+    <hr class="uk-grid-divider">
+
+    <div class="uk-grid uk-text-center">
+        <div class="uk-width-medium-1-4">
+        </div>
+        <div class="uk-width-medium-1-4">
+            <h2>Статистика</h2>
+        </div>
+    </div>
+
+    <div class="uk-grid uk-margin-small-top uk-text-center">
+        <div class="uk-width-medium-1-4">
+            <p class="gray">Вещей сдано/взято:</p>
+            <p class="text-big">21/5</p>
+        </div>
+        <div class="uk-width-medium-1-4">
+            <p class="gray">Всего заработано:</p>
+            <p class="text-big">145 000 ₸</p>
+        </div>
+        <div class="uk-width-medium-1-4">
+            <p class="gray">Всего потрачено:</p>
+            <p class="text-big">12 050 ₸</p>
+            <p class="gray">10 000 Аренда <br>
+            2 050 Продвижение</p>
+        </div>
+        <div class="uk-width-medium-1-4">
+            <p class="main-blue">Всего замарожено:</p>
+            <p class="text-big main-blue">37 000 ₸</p>
+        </div>
+    </div>
+
+    <hr class="uk-grid-divider">
+
+    <div class="uk-grid">
+        <div class="uk-width-medium-2-10 uk-hidden-small">
+        </div>
+        <div class="uk-width-medium-8-10">
+            <p class="uk-margin-top">
+                Здесь обычно размещают какой-то текст из разряда финансовых Disclaimer'ов и отказа от обязательств, что-нибудь про
+                <a href="#/">Пользовательское соглашение</a> и так далее - вопрос к юристам, что именно, моё дело здесь продемонстрировать, как будет выглядеть этот блок и содержащаяся в нём информация.
+            </p>
+            <br>
+        </div>
+    </div>
+</div>
+<!--END balance -->
+
+<footer>
+    <div class="uk-container uk-container-center">
+        <h2>Меню</h2>
+        <div class="uk-grid">
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">О нас</a></li>
+                <li><a href="">Каталог вещей</a></li>
+                <li><a href="">Популярное</a></li>
+                <li><a href="">Рейтинг</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">Как это работает?</a></li>
+                <li><a href="">Ответы на вопросы</a></li>
+                <li><a href="">Претензии по вещи</a></li>
+                <li><a href="">Арбитраж</a></li>
+                <li><a href="">Статистика</a></li>
+                <li><a href="">Обратная связь</a></li>
+            </ul>
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">Регистрация на портале</a></li>
+                <li><a href="">Восстановление доступа</a></li>
+                <li><a href="">Свзязаться с поддержкой</a></li>
+                <li><a href="">У меня идея!</a></li>
+                <li><a href="">Сотрудничество</a></li>
+                <li><a href="">Реклама на портале</a></li>
+                <li><a href="">Карта сайта</a></li>
+            </ul>
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">Политика использования</a></li>
+                <li><a href="">Пользовательское соглашение</a></li>
+            </ul>
+        </div>
+        <p class="copyright-note">&copy; Rent24.kz 2017 // Все права защищены<p>
+    </div>
+</footer>
+
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+<script src="node_modules/uikit/dist/js/components/grid.min.js"></script>
+<script src="node_modules/uikit/dist/js/components/sticky.min.js"></script>
+</body>
+</html>

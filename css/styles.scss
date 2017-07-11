@@ -71,9 +71,14 @@ END переопределение стилей браузера и uikit
 BEGIN общие стили
 ********************************************/
 
+//фирменный синий
+.main-blue {
+  color: #0099d2;
+}
+
 //серый
 .gray {
-  color: #777777;
+  color: #777;
 }
 
 //класс для центровки при мобильном экране
@@ -484,8 +489,8 @@ BEGIN add item page
     align-items: center;
   }
 
-  .uk-grid .uk-width-medium-2-10 {
-    justify-content: flex-end;
+  .uk-grid .uk-grid .uk-width-medium-2-10 {
+    justify-content: center;
   }
 
   label {
@@ -500,11 +505,61 @@ BEGIN add item page
     margin: 10px 0;
     resize: none;
   }
-
-
 }
-
 
 /********************************************
 END add item page
+********************************************/
+/********************************************
+BEGIN balance
+********************************************/
+.balance-page {
+  padding-top: 30px;
+  padding-bottom: 20px;
+
+  [class*=uk-width] {
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+
+  ul.transactions {
+    padding-left: 0;
+    li {
+      display: flex;
+      justify-content: space-between;
+      padding: 0 5px;
+      &:nth-child(odd) {
+        background: #f3f3f3;
+      }
+      &.income {
+        list-style-image: url("../img/arrow-income.png");
+      }
+      &.outcome {
+        list-style-image: url("../img/arrow-outcome.png");
+      }
+      span {
+        color: #777;
+      }
+    }
+  }
+
+  form {
+    line-height: 2;
+    input.sum {
+      max-width: 100px;
+    }
+    .big-text {
+      font-size: 20px;
+    }
+    .btn {
+      padding: 0 20px 0 15px;
+    }
+  }
+
+  .text-big {
+    font-size: 35px;
+  }
+}
+/********************************************
+END balance
 ********************************************/
