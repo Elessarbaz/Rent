@@ -99,6 +99,7 @@ BEGIN общие стили
   font-size: 16px;
   padding: 10px 15px;
   transition: .5s;
+  text-align: center;
   &:hover {
     background: $main-color;
     color: white;
@@ -562,4 +563,76 @@ BEGIN balance
 }
 /********************************************
 END balance
+********************************************/
+/********************************************
+BEGIN my stuff
+********************************************/
+.my-stuff-page {
+  padding-top: 20px;
+  &>h2 {
+    background: lighten($main-color, 15);
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px;
+  }
+  a.uk-text-large {
+    left: 120px;
+    top: 110px;
+    text-align: center;
+    transition: 1s all;
+    @media screen and (min-width: 760px) {
+      position: absolute;
+    }
+    .plus-sign {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      background: 0 0/cover url("../img/icon-add.png");
+      transition: 1s all;
+    }
+    &:hover .plus-sign {
+      background-image: url("../img/icon-add-inverse.png");
+      transition: 1s all;
+    }
+  }
+  a.uk-text-large.bottom-side {
+    position: static;
+    display: block;
+    width: 300px;
+    margin: auto;
+    .plus-sign {
+      width: 50px;
+      height: 50px;
+    }
+  }
+  .banner {
+    background: 0 0/cover url("../img/background_luggage.jpg");
+    padding: 30px 0;
+    position: relative;
+    .text-container {
+      max-width: 400px;
+      @media screen and (min-width: 760px) {
+        margin-left: 45%;
+      }
+    }
+  }
+  .ads {
+    margin-top: 15px;
+    background: #f3f3f3;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    div.img {
+      height: 180px;
+      background: 50% 50%/cover;
+    }
+    .btn {
+      padding: 7px 10px;
+      width: 100%;
+      margin-bottom: 10px;
+    }
+  }
+}
+/********************************************
+END my stuff
 ********************************************/

@@ -22,11 +22,11 @@
         <ul class="uk-navbar-nav uk-hidden-small">
           <li class="uk-active"><a href="index.html">Каталог</a></li>
           <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
-          <li><a href="">Мои вещи (3)</a></li>
-          <li><a href="">Сообщения (12)</a></li>
+          <li><a href="my_stuff.html">Мои вещи (3)</a></li>
+          <li><a href="messages.html">Сообщения (12)</a></li>
           <li><a href="balance.html">Баланс (145,000тг)</a></li>
-          <li><a href="">Настройки</a></li>
-          <li><a href="">Помощь</a></li>
+          <li><a href="settings.html">Настройки</a></li>
+          <li><a href="help.html">Помощь</a></li>
           <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
           <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
           <li>
@@ -50,11 +50,11 @@
     <div class="uk-offcanvas-bar">
       <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
         <li class="uk-active"><a href="index.html">Каталог</a></li>
-        <li><a href="">Мои вещи (3)</a></li>
-        <li><a href="">Сообщения (12)</a></li>
+        <li><a href="my_stuff.html">Мои вещи (3)</a></li>
+        <li><a href="messages.html">Сообщения (12)</a></li>
         <li><a href="balance.html">Баланс (145,000тг)</a></li>
-        <li><a href="">Настройки</a></li>
-        <li><a href="">Помощь</a></li>
+        <li><a href="settings.html">Настройки</a></li>
+        <li><a href="help.html">Помощь</a></li>
         <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
       </ul>
     </div>
@@ -260,6 +260,95 @@
     </div>
   </footer>
 
+  <!--BEGIN login modal window-->
+  <div id="login-modal" class="uk-modal">
+    <div class="uk-modal-dialog">
+      <a class="uk-modal-close uk-close"></a>
+      <div class="uk-modal-header">
+        <h2>Личный кабинет</h2>
+      </div>
+      <form action="" class="uk-form uk-form-stacked">
+        <div class="uk-form-row">
+          <div class="uk-form-controls">
+            <input type="email" placeholder="Электронная почта" class="uk-width-1-1">
+          </div>
+        </div>
+        <div class="uk-form-row">
+          <div class="uk-form-controls">
+            <input type="password" placeholder="Пароль" class="uk-width-1-1">
+          </div>
+        </div>
+        <div class="uk-form-row flex-row">
+          <input class="btn" type="submit" value="Войти">
+          <div><a href=" ">Забыли пароль?</a></div>
+        </div>
+      </form>
+      <div class="uk-modal-footer">
+        <p>Ещё не зарегистрированы?</p>
+        <div class="flex-row">
+          <button class="btn">Регистрация</button>
+          <div class="uk-text-center"><span>Это быстро и бесплатно</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--BEGIN login modal window-->
+
+  <!--BEGIN sign-up modal window-->
+  <div id="sign-up-modal" class="uk-modal">
+    <div class="uk-modal-dialog">
+      <a class="uk-modal-close uk-close"></a>
+      <div class="uk-modal-header">
+        <h2>Регистрация</h2>
+      </div>
+      <form action="" class="uk-form uk-form-stacked">
+        <div class="uk-form-row">
+          <div class="uk-form-controls">
+            <input type="email" placeholder="Электронная почта" class="uk-width-1-1">
+          </div>
+        </div>
+        <div class="uk-form-row">
+          <div class="uk-form-controls">
+            <input type="password" placeholder="Пароль" class="uk-width-1-1">
+          </div>
+        </div>
+        <div class="uk-form-row">
+          <div class="uk-form-controls">
+            <input type="password" placeholder="Подтверждение пароля" class="uk-width-1-1">
+          </div>
+        </div>
+        <div class="uk-form-row">
+          <div class="uk-form-controls">
+            <input type="tel" placeholder="Мобильный телефон" class="uk-width-1-1">
+          </div>
+        </div>
+        <p class="gray">
+          <small>Пожалуйста, укажите свой номер в формате +77011234567. <br>
+            После нажатия кнопки "Зарегистрироваться" на указанный вами номер будет отправлено SMS-сообщение с кодом
+            подтверждения.
+          </small> <br>
+          <small>На указанный номер было отправлено  SMS-сообщение с кодом подтверждения. Если сообщение не пришло, вы сможете
+            <a href="">отправить SMS ещё раз</a> через 30 секунд
+          </small>
+        </p>
+        <div class="uk-form-row flex-row">
+          <input class="btn" type="submit" value="Зарегистрироваться">
+        </div>
+      </form>
+      <div class="uk-modal-footer">
+        <p>Введите проверочный код из SMS</p>
+        <form action="" class="uk-form uk-form-stacked">
+          <div class="uk-form-row">
+            <div class="uk-form-controls">
+              <input type="text" placeholder="Проверочный код" class="uk-width-1-1">
+            </div>
+          </div>
+
+        </form>
+      </div>
+    </div>
+  </div>
+  <!--BEGIN sign-up modal indow-->
 
   <script src="node_modules/jquery/dist/jquery.min.js"></script>
   <script src="node_modules/uikit/dist/js/uikit.min.js"></script>

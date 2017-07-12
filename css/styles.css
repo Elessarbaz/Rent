@@ -66,7 +66,8 @@ BEGIN общие стили
   color: #0099d2;
   font-size: 16px;
   padding: 10px 15px;
-  transition: .5s; }
+  transition: .5s;
+  text-align: center; }
   .btn:hover {
     background: #0099d2;
     color: white; }
@@ -416,6 +417,67 @@ BEGIN balance
 
 /********************************************
 END balance
+********************************************/
+/********************************************
+BEGIN my stuff
+********************************************/
+.my-stuff-page {
+  padding-top: 20px; }
+  .my-stuff-page > h2 {
+    background: #20c2ff;
+    color: white;
+    text-align: center;
+    padding-top: 7px;
+    padding-bottom: 7px; }
+  .my-stuff-page a.uk-text-large {
+    left: 120px;
+    top: 110px;
+    text-align: center;
+    transition: 1s all; }
+    @media screen and (min-width: 760px) {
+      .my-stuff-page a.uk-text-large {
+        position: absolute; } }
+    .my-stuff-page a.uk-text-large .plus-sign {
+      width: 100px;
+      height: 100px;
+      margin: auto;
+      background: 0 0/cover url("../img/icon-add.png");
+      transition: 1s all; }
+    .my-stuff-page a.uk-text-large:hover .plus-sign {
+      background-image: url("../img/icon-add-inverse.png");
+      transition: 1s all; }
+  .my-stuff-page a.uk-text-large.bottom-side {
+    position: static;
+    display: block;
+    width: 300px;
+    margin: auto; }
+    .my-stuff-page a.uk-text-large.bottom-side .plus-sign {
+      width: 50px;
+      height: 50px; }
+  .my-stuff-page .banner {
+    background: 0 0/cover url("../img/background_luggage.jpg");
+    padding: 30px 0;
+    position: relative; }
+    .my-stuff-page .banner .text-container {
+      max-width: 400px; }
+      @media screen and (min-width: 760px) {
+        .my-stuff-page .banner .text-container {
+          margin-left: 45%; } }
+  .my-stuff-page .ads {
+    margin-top: 15px;
+    background: #f3f3f3;
+    padding-top: 15px;
+    padding-bottom: 15px; }
+    .my-stuff-page .ads div.img {
+      height: 180px;
+      background: 50% 50%/cover; }
+    .my-stuff-page .ads .btn {
+      padding: 7px 10px;
+      width: 100%;
+      margin-bottom: 10px; }
+
+/********************************************
+END my stuff
 ********************************************/
 
 /*# sourceMappingURL=styles.css.map */
