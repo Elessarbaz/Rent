@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Rent24 Balance</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="node_modules/uikit/dist/css/components/sticky.almost-flat.min.css">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<!--BEGIN header (logo and navbar)-->
+<header data-uk-sticky="{top:-300, animation: 'uk-animation-slide-top'}">
+    <div class="uk-container uk-container-center uk-grid uk-grid-match">
+        <div class="uk-width-medium-2-10">
+            <a href="index.html"><img src="img/logo.png" class="sm-center" alt="Logo">
+            </a>
+        </div>
+        <nav class="uk-nav uk-width-medium-8-10">
+            <ul class="uk-navbar-nav uk-hidden-small">
+                <li class="uk-active"><a href="index.html">Каталог</a></li>
+                <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+                <li><a href="my_stuff.html">Мои вещи (3)</a></li>
+                <li><a href="messages.html">Сообщения (12)</a></li>
+                <li><a href="balance.html">Баланс (145,000тг)</a></li>
+                <li><a href="settings.html">Настройки</a></li>
+                <li><a href="help.html">Помощь</a></li>
+                <li class="uk-visible-large"><a href="#/" class="uk-padding-remove">|</a></li>
+                <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+                <li>
+                    <img src="img/avatar_skyrim.jpg" class="avatar">
+                </li>
+            </ul>
+
+            <!--BEGIN sidebar(off-canvas) button (appears on display < 768px)-->
+            <div>
+                <a href="#sidebar-menu" class="uk-navbar-toggle uk-visible-small"
+                   data-uk-offcanvas="{target:'#sidebar-menu'}"></a>
+            </div>
+            <!--END sidebar(off-canvas) button (appears on display < 768px)-->
+        </nav>
+
+    </div>
+</header>
+<!--END header (logo and navbar)-->
+<!--BEGIN sidebar-->
+<div id="sidebar-menu" class="uk-offcanvas">
+    <div class="uk-offcanvas-bar">
+        <ul class="uk-nav uk-nav-offcanvas" data-uk-nav>
+            <li class="uk-active"><a href="index.html">Каталог</a></li>
+            <li><a href="my_stuff.html">Мои вещи (3)</a></li>
+            <li><a href="messages.html">Сообщения (12)</a></li>
+            <li><a href="balance.html">Баланс (145,000тг)</a></li>
+            <li><a href="settings.html">Настройки</a></li>
+            <li><a href="help.html">Помощь</a></li>
+            <li><a href="#login-modal" data-uk-modal="{center:true}">Войти</a></li>
+        </ul>
+    </div>
+</div>
+<!--END sidebar-->
+
+<!--BEGIN messages-page-->
+<div class="messages-page uk-container uk-container-center">
+    <div class="uk-grid">
+        <div class="uk-width-medium-3-10">
+            <br class="uk-hidden-small"><br class="uk-hidden-small">
+            <p class="active"><a href=""> <img class="avatar" src="img/avatar-dialog-support.png"> Служба поддержки (1)</a></p>
+            <p><a href=""> <img class="avatar" src="img/avatar-dialog-abish.jpg"> Абиш Абдельдинов (8)</a></p>
+            <p><a href=""> <img class="avatar" src="img/avatar-dialog-gosha.jpg"> Георгий Ефремов (3)</a></p>
+            <p><a href=""> <img class="avatar" src="img/avatar-dialog-generic.jpg"> Неизвестный пользователь</a></p>
+            <br>
+        </div>
+        <div class="uk-width-medium-7-10 messages">
+            <h2 class="uk-hidden-small">Сообщения</h2>
+            <div class="uk-panel uk-panel-box message">
+                Добро пожаловать в BERU.RENT, Нурлан!
+                На Ваш электронный адрес было отправлено письмо со ссылкой для активации. После того, как перейдёте по ссылке, перейдите в раздел "<a href="#/">Настройки</a>", чтобы заполнить необходимые поля и начать полноценную работу с сервисом.
+                <div class="uk-comment-meta">14:23 10 мая 2017</div>
+            </div>
+            <div class="uk-panel uk-panel-box message user">
+                Спасибо! А на это письмо обязательно отвечать?
+                <div class="uk-comment-meta">14:25 10 мая 2017</div>
+            </div>
+            <div class="uk-panel uk-panel-box message new">
+                Конечно нет! Это письмо сгенерировано автоматически, чтобы помочь Вам начать пользоваться сервисом.
+                <img src="img/tyson.jpg">
+                <div class="uk-comment-meta">14:26 10 мая 2017</div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--END messages-page -->
+
+<footer>
+    <div class="uk-container uk-container-center">
+        <h2>Меню</h2>
+        <div class="uk-grid">
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">О нас</a></li>
+                <li><a href="">Каталог вещей</a></li>
+                <li><a href="">Популярное</a></li>
+                <li><a href="">Рейтинг</a></li>
+                <li><a href="">Контакты</a></li>
+            </ul>
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">Как это работает?</a></li>
+                <li><a href="">Ответы на вопросы</a></li>
+                <li><a href="">Претензии по вещи</a></li>
+                <li><a href="">Арбитраж</a></li>
+                <li><a href="">Статистика</a></li>
+                <li><a href="">Обратная связь</a></li>
+            </ul>
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">Регистрация на портале</a></li>
+                <li><a href="">Восстановление доступа</a></li>
+                <li><a href="">Свзязаться с поддержкой</a></li>
+                <li><a href="">У меня идея!</a></li>
+                <li><a href="">Сотрудничество</a></li>
+                <li><a href="">Реклама на портале</a></li>
+                <li><a href="">Карта сайта</a></li>
+            </ul>
+            <ul class="uk-width-medium-1-4 uk-width-small-1-2">
+                <li><a href="">Политика использования</a></li>
+                <li><a href="">Пользовательское соглашение</a></li>
+            </ul>
+        </div>
+        <p class="copyright-note">&copy; Rent24.kz 2017 // Все права защищены<p>
+    </div>
+</footer>
+
+<!--BEGIN login modal window-->
+<div id="login-modal" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <div class="uk-modal-header">
+            <h2>Личный кабинет</h2>
+        </div>
+        <form action="" class="uk-form uk-form-stacked">
+            <div class="uk-form-row">
+                <div class="uk-form-controls">
+                    <input type="email" placeholder="Электронная почта" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <div class="uk-form-controls">
+                    <input type="password" placeholder="Пароль" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row flex-row">
+                <input class="btn" type="submit" value="Войти">
+                <div><a href=" ">Забыли пароль?</a></div>
+            </div>
+        </form>
+        <div class="uk-modal-footer">
+            <p>Ещё не зарегистрированы?</p>
+            <div class="flex-row">
+                <button class="btn">Регистрация</button>
+                <div class="uk-text-center"><span>Это быстро и бесплатно</span></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--BEGIN login modal window-->
+
+<!--BEGIN sign-up modal window-->
+<div id="sign-up-modal" class="uk-modal">
+    <div class="uk-modal-dialog">
+        <a class="uk-modal-close uk-close"></a>
+        <div class="uk-modal-header">
+            <h2>Регистрация</h2>
+        </div>
+        <form action="" class="uk-form uk-form-stacked">
+            <div class="uk-form-row">
+                <div class="uk-form-controls">
+                    <input type="email" placeholder="Электронная почта" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <div class="uk-form-controls">
+                    <input type="password" placeholder="Пароль" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <div class="uk-form-controls">
+                    <input type="password" placeholder="Подтверждение пароля" class="uk-width-1-1">
+                </div>
+            </div>
+            <div class="uk-form-row">
+                <div class="uk-form-controls">
+                    <input type="tel" placeholder="Мобильный телефон" class="uk-width-1-1">
+                </div>
+            </div>
+            <p class="gray">
+                <small>Пожалуйста, укажите свой номер в формате +77011234567. <br>
+                    После нажатия кнопки "Зарегистрироваться" на указанный вами номер будет отправлено SMS-сообщение с кодом
+                    подтверждения.
+                </small> <br>
+                <small>На указанный номер было отправлено  SMS-сообщение с кодом подтверждения. Если сообщение не пришло, вы сможете
+                    <a href="">отправить SMS ещё раз</a> через 30 секунд
+                </small>
+            </p>
+            <div class="uk-form-row flex-row">
+                <input class="btn" type="submit" value="Зарегистрироваться">
+            </div>
+        </form>
+        <div class="uk-modal-footer">
+            <p>Введите проверочный код из SMS</p>
+            <form action="" class="uk-form uk-form-stacked">
+                <div class="uk-form-row">
+                    <div class="uk-form-controls">
+                        <input type="text" placeholder="Проверочный код" class="uk-width-1-1">
+                    </div>
+                </div>
+
+            </form>
+        </div>
+    </div>
+</div>
+<!--BEGIN sign-up modal indow-->
+
+<script src="node_modules/jquery/dist/jquery.min.js"></script>
+<script src="node_modules/uikit/dist/js/uikit.min.js"></script>
+<script src="node_modules/uikit/dist/js/components/grid.min.js"></script>
+<script src="node_modules/uikit/dist/js/components/sticky.min.js"></script>
+</body>
+</html>

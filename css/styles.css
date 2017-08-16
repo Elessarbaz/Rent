@@ -479,5 +479,51 @@ BEGIN my stuff
 /********************************************
 END my stuff
 ********************************************/
+/********************************************
+BEGIN messages-page
+********************************************/
+.messages-page {
+  padding-top: 20px;
+  padding-bottom: 30px; }
+  .messages-page .avatar {
+    border-radius: 50%; }
+  .messages-page .active {
+    background: #d2f3ff; }
+  .messages-page .messages img {
+    margin: 10px 0; }
+  .messages-page .messages .message {
+    position: relative; }
+    .messages-page .messages .message::before {
+      content: ' ';
+      position: absolute;
+      width: 0;
+      height: 0;
+      left: 0;
+      bottom: -17.5px;
+      border: 10px solid;
+      border-color: #f5f5f5 transparent transparent #f5f5f5; }
+    .messages-page .messages .message.user {
+      background: #d2f3ff; }
+      .messages-page .messages .message.user:before {
+        right: 0;
+        left: auto;
+        border-color: #d2f3ff #d2f3ff transparent transparent; }
+    .messages-page .messages .message.new {
+      border: 1px solid #0099d2; }
+      .messages-page .messages .message.new:after {
+        content: ' ';
+        position: absolute;
+        width: 0;
+        height: 0;
+        left: -1px;
+        bottom: -20px;
+        border: 10px solid;
+        border-color: #0099d2 transparent transparent #0099d2; }
+      .messages-page .messages .message.new:before {
+        z-index: 20; }
+
+/********************************************
+END messages-page
+********************************************/
 
 /*# sourceMappingURL=styles.css.map */
