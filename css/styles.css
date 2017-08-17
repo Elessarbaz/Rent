@@ -8,6 +8,9 @@ BEGIN переопределение стилей браузера и uikit
 a:hover {
   text-decoration: none; }
 
+ul {
+  list-style: none; }
+
 .uk-grid-match > * > img {
   width: auto; }
 
@@ -41,6 +44,10 @@ a.uk-navbar-toggle {
   padding: 0 10px;
   background: white; }
 
+img.avatar {
+  height: 50px;
+  width: 50px; }
+
 /********************************************
 END переопределение стилей браузера и uikit
 ********************************************/
@@ -52,6 +59,9 @@ BEGIN общие стили
 
 .gray {
   color: #777; }
+
+.background-gray {
+  background: #fafaf8; }
 
 @media screen and (max-width: 768px) {
   .sm-center {
@@ -116,8 +126,6 @@ BEGIN общие стили
     font-weight: bold;
     color: #666666; }
   .seller-info img.avatar {
-    height: 50px;
-    width: 50px;
     margin-right: 10px; }
 
 /********************************************
@@ -524,6 +532,47 @@ BEGIN messages-page
 
 /********************************************
 END messages-page
+********************************************/
+/********************************************
+BEGIN settings-page
+********************************************/
+.settings-page {
+  padding-bottom: 30px; }
+  .settings-page [class*=uk-width-] {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center; }
+  .settings-page input, .settings-page select, .settings-page textarea {
+    max-width: 400px;
+    font-size: 16px;
+    padding: 8px;
+    background: white;
+    margin: 10px 0;
+    resize: none; }
+
+/********************************************
+END settings-page
+********************************************/
+/********************************************
+BEGIN help-page
+********************************************/
+.help-page {
+  padding-top: 30px;
+  padding-bottom: 30px; }
+  .help-page img {
+    max-width: 300px;
+    margin-bottom: 5px; }
+    .help-page img.float-left {
+      float: left;
+      margin-right: 7px; }
+    .help-page img.float-right {
+      float: right;
+      margin-left: 7px; }
+
+/********************************************
+END help-page
 ********************************************/
 
 /*# sourceMappingURL=styles.css.map */

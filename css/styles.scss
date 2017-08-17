@@ -18,6 +18,9 @@ a {
     text-decoration: none;
   }
 }
+ul {
+  list-style: none;
+}
 
 //перепишем стили uikit, чтобы не растягивалась картинка внутри .uk-grid-match:
 .uk-grid-match>*>img {
@@ -63,6 +66,11 @@ a.uk-navbar-toggle {
   padding: 0 10px;
   background: rgb(255,255,255);
 }
+
+img.avatar {
+  height: 50px;
+  width: 50px;
+}
 /********************************************
 END переопределение стилей браузера и uikit
 ********************************************/
@@ -79,6 +87,10 @@ BEGIN общие стили
 //серый
 .gray {
   color: #777;
+}
+
+.background-gray {
+  background: #fafaf8;
 }
 
 //класс для центровки при мобильном экране
@@ -162,8 +174,6 @@ BEGIN общие стили
     color: #666666;
   }
   img.avatar {
-    height: 50px;
-    width: 50px;
     margin-right: 10px;
   }
 }
@@ -697,4 +707,53 @@ BEGIN messages-page
 }
 /********************************************
 END messages-page
+********************************************/
+/********************************************
+BEGIN settings-page
+********************************************/
+.settings-page {
+  padding-bottom: 30px;
+
+  [class*=uk-width-] {
+    padding-top: 7px;
+    padding-bottom: 7px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+  }
+  input, select, textarea {
+    max-width: 400px;
+    font-size: 16px;
+    padding: 8px;
+    background: white;
+    margin: 10px 0;
+    resize: none;
+  }
+}
+/********************************************
+END settings-page
+********************************************/
+/********************************************
+BEGIN help-page
+********************************************/
+.help-page {
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  img {
+    max-width: 300px;
+    margin-bottom: 5px;
+    &.float-left {
+      float: left;
+      margin-right: 7px;
+    }
+    &.float-right {
+      float: right;
+      margin-left: 7px;
+    }
+  }
+}
+
+/********************************************
+END help-page
 ********************************************/
